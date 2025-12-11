@@ -1,122 +1,120 @@
-🎉 HangoutHub
+# 🎉 HangoutHub
 
-A modern web application for planning, sharing, and discovering hangout plans with friends.
-Create detailed plans with timelines, budgets, images, and interact with the community through likes and comments.
+A modern web application for **planning, sharing, and discovering hangout plans** with friends.  
+Create detailed plans with **timelines, budgets, images**, and interact with the community through **likes and comments**.
 
+---
 
-✨ Features
-🔐 Authentication
+## 🚀 Tech Stack
 
-User registration & login
+![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19.2-blue?style=for-the-badge&logo=react)
+![MongoDB](https://img.shields.io/badge/MongoDB-9.0-green?style=for-the-badge&logo=mongodb)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)
 
-Secure JWT-based authentication
+---
 
-Protected API routes
+## ✨ Features
 
-User profile management
+### 🔐 Authentication
+- User registration & login  
+- Secure JWT-based authentication  
+- Protected API routes  
+- User profile management  
 
-📋 Plan Management
+### 📋 Plan Management
+- **Create detailed plans** with:
+  - Title & description  
+  - Budget tracking  
+  - Timeline (activity + location + time)  
+  - Upload multiple images via Cloudinary  
+- **Browse plans** with:
+  - Search by title, description, location  
+  - Budget filtering  
+  - Sorting by likes, budget, recent  
+  - Responsive grid layout  
 
-Create Plans with:
+### 💬 Social Features
+- Comment on plans  
+- Creators can reply  
+- Like system  
+- Image gallery with lightbox  
 
-Title & description
+### 🎨 UI/UX Highlights
+- Tailwind-based modern UI  
+- Glassmorphism effects  
+- Smooth animations  
+- Fully responsive  
+- Dark theme optimized  
+- Real-time feedback  
 
-Budget tracking
+---
 
-Timeline (activity + location + time)
+## 🛠️ Tech Stack Details
 
-Multiple image uploads (Cloudinary)
+### Frontend
+- Next.js 16 (App Router)  
+- React 19  
+- Tailwind CSS 4  
 
-Browse Plans:
+### Backend
+- Next.js API Routes  
+- MongoDB  
+- Mongoose  
+- JWT Authentication  
+- bcryptjs  
 
-Search by title, description, location
+### Services
+- Cloudinary (image uploads)
 
-Budget filtering
+---
 
-Sort by likes, recent, budget
+## 📋 Prerequisites
 
-Responsive grid layout
+- Node.js ≥ 18  
+- npm / yarn / pnpm  
+- MongoDB (local or Atlas)  
+- Cloudinary account  
 
-💬 Social Features
+---
 
-Comments & questions
+## 🚀 Installation
 
-Creator replies
-
-Like system
-
-Lightbox image gallery
-
-🎨 User Experience
-
-Tailwind CSS modern UI
-
-Glassmorphism elements
-
-Smooth animations
-
-Dark theme ready
-
-Real-time feedback
-
-🛠️ Tech Stack
-Frontend
-
-Next.js 16
-
-React 19
-
-Tailwind CSS 4
-
-Client Components
-
-Backend
-
-Next.js Serverless API routes
-
-MongoDB + Mongoose
-
-JWT authentication
-
-bcryptjs password hashing
-
-Services
-
-Cloudinary (image storage)
-
-📋 Prerequisites
-
-Node.js ≥ 18
-
-npm / yarn / pnpm
-
-MongoDB
-
-Cloudinary account
-
-🚀 Installation
-1️⃣ Clone repository
+### 1️⃣ Clone repository
+```bash
 git clone https://github.com/yourusername/hangouthub.git
 cd hangouthub
+```
 
-2️⃣ Install dependencies
+### 2️⃣ Install dependencies
+```bash
 npm install
+```
 
-3️⃣ Create .env.local
+### 3️⃣ Add environment variables  
+Create a file **`.env.local`**:
+
+```env
 MONGODB_URI=your_mongodb_connection_string
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 JWT_SECRET=your_jwt_secret_key
+```
 
-4️⃣ Start development server
+### 4️⃣ Start development server
+```bash
 npm run dev
+```
 
-
-Open:
+Visit:  
 👉 http://localhost:3000
 
-📁 Project Structure
+---
+
+## 📁 Project Structure
+
+```
 hangouthub/
 ├── app/
 │   ├── api/
@@ -132,57 +130,112 @@ hangouthub/
 ├── models/
 ├── middleware.js
 ├── public/
+├── tailwind.config.js
+├── postcss.config.js
 └── package.json
+```
 
-🔌 API Endpoints
-Authentication
+---
 
-POST /api/auth/register
+## 🔌 API Endpoints
 
-POST /api/auth/login
+### Authentication
+- POST `/api/auth/register`  
+- POST `/api/auth/login`  
+- POST `/api/logout`  
 
-POST /api/logout
+### Plans
+- GET `/api/plans/list`  
+- POST `/api/plans`  
+- GET `/api/plans/[id]`  
 
-Plans
+### Comments
+- POST `/api/comments`  
+- POST `/api/comments/[id]/reply`  
 
-GET /api/plans/list
+### Likes
+- POST `/api/likes/[id]`  
+- POST `/api/unlikes/[id]`  
 
-POST /api/plans
+### Upload
+- POST `/api/upload`  
 
-GET /api/plans/[id]
+### Profile
+- GET `/api/profile`  
+- POST `/api/profile/update`
 
-Comments
+---
 
-POST /api/comments
+## 🎯 Usage
 
-POST /api/comments/[id]/reply
+### Creating a Plan
+1. Login  
+2. Click **Create Plan**  
+3. Fill in:
+   - Title  
+   - Description  
+   - Budget  
+   - Timeline steps  
+   - Upload images  
+4. Publish the plan  
 
-Likes
+### Exploring Plans
+- Browse all plans  
+- Search & filter  
+- Sort by popularity  
 
-POST /api/likes/[id]
+### Interacting
+- Like plans  
+- Comment & ask questions  
+- View gallery  
 
-POST /api/unlikes/[id]
+---
 
-Upload
+## 🔒 Security Features
 
-POST /api/upload
+- bcrypt password hashing  
+- JWT authentication  
+- Protected API routes  
+- Server-side input validation  
 
-Profile
+---
 
-GET /api/profile
+## 🚧 Future Enhancements
 
-POST /api/profile/update
+- [ ] Follow creators  
+- [ ] Social media sharing  
+- [ ] Email notifications  
+- [ ] Plan categories/tags  
+- [ ] Map integration  
+- [ ] User ratings  
+- [ ] Export plan as PDF  
 
-🚧 Future Enhancements
+---
 
- Follow users
+## 🤝 Contributing
 
- Social sharing
+1. Fork  
+2. Create feature branch  
+3. Commit  
+4. Push  
+5. Submit PR  
 
- Email notifications
+---
 
- Tags/categories
+## 📝 License
 
- Map integration
+MIT License
 
- Export plan (PDF/share)
+---
+
+## 👤 Author
+
+**Your Name**  
+GitHub: @yourusername  
+Email: your.email@example.com  
+
+---
+
+## ⭐ Support
+
+If you like this project, please ⭐ star the repo!
