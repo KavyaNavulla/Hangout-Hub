@@ -82,9 +82,10 @@ Create detailed plans with **timelines, budgets, images**, and interact with the
 
 ### 1️⃣ Clone repository
 ```bash
-git clone https://github.com/yourusername/hangouthub.git
-cd hangouthub
+git clone https://github.com/KavyaNavulla/Hangout-Hub.git
+cd Hangout-Hub
 ```
+
 
 ### 2️⃣ Install dependencies
 ```bash
